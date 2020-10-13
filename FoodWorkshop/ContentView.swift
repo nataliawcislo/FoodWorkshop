@@ -28,7 +28,7 @@ struct ContentView: View {
                 case 2:
                     ProductView(items: products)
                 case 3:
-                    LocalizationView()
+                    LocationView()
                 case 4:
                     InfoView()
                 default:
