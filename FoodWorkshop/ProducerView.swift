@@ -12,37 +12,41 @@ struct ProducerView: View {
     var body: some View {
         ScrollView{
             ForEach(items, id: \.id) { item in
-//                HStack{
-//                    Image(item.image)
-//                        .resizable()
-//                        .frame(width: 40, height: 40)
-//                        .cornerRadius(5)
-//
-//                    Text(item.name)
-//                        .font(.system(size: 18, weight: .light, design: .rounded))
-//                        .foregroundColor(.black)
-//                }
-                ZStack{
-                    Rectangle()
-                        .foregroundColor(Color("PColor"))
-                        .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    HStack{
-                        Circle()
+              
+                    ZStack{
+                        Rectangle()
                             .fill(
                                 LinearGradient(
-                                    gradient: Gradient(colors: [.yellow, .red]),
+                                    gradient: Gradient(colors: [Color("PC"), Color("PC2")]),
                                     startPoint: .topLeading,
                                     endPoint: .bottomTrailing))
-                            .frame(width: 70, height: 70)
-                            .opacity(0.65)
-                            .overlay(Text("0.7 km").foregroundColor(.white).font(.system(size: 18, weight: .bold, design: .rounded)))
-                       Spacer()
-                        Text(item.name)
-                            .foregroundColor(.white)
-                            .font(.system(size: 26, weight: .light, design: .rounded))
-                            .multilineTextAlignment(.center)
-                    }.padding(.horizontal, 20.0)
-                   
+                            .border(Color.gray)
+                            .frame(height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        HStack{
+                            Circle()
+                                .fill(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [Color("PC13"), Color("PC5")]),
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing))
+                                .frame(width: 70, height: 70)
+                                .opacity(0.65)
+                                .overlay(Text("0.7 km").foregroundColor(.white).font(.system(size: 18, weight: .bold, design: .rounded)))
+                                .padding(.horizontal, 15.0)
+                            VStack{
+                                Text(item.name)
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 26, weight: .light, design: .rounded))
+                                    .multilineTextAlignment(.center).padding(.top, 30)
+                                Spacer()
+                                HStack{
+                                    Spacer()
+                                    Image("temp").resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 100)
+                                }
+                            }.padding(.horizontal, 15.0).padding(.vertical, 2)
+                        }
                 }
             }
         }

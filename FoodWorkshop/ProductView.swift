@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListView: View {
+struct ProductView: View {
     let items: [Product]
     var body: some View {
        ScrollView{
@@ -35,6 +35,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(items: products)
+        ProductView(items: products)
     }
 }

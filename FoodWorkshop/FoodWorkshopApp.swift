@@ -11,7 +11,7 @@ import SwiftUI
 struct FoodWorkshopApp: App {    
     var body: some Scene {
         WindowGroup {
-            ContentView(items: products, searchText: "")
+            ContentView(items: products)
         }
     }
 }

@@ -27,7 +27,7 @@ struct TabsView: View {
                         Text(tab)
                             .fontWeight(.light)
                             .font(.custom("Helvetica Neue", size: 22))
-                            .foregroundColor(index == selectedTabIndex ? Color("NavColor") : .black)
+                            .foregroundColor(index == selectedTabIndex ? Color("PC8") : .black)
                     }
                 }
                 Spacer()

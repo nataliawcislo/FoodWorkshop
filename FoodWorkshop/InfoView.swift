@@ -19,7 +19,11 @@ struct InfoView: View {
 //                    .frame(height: 300, alignment: .center)
 //                    .mask(Parallelogram(depth: 50))
                 Parallelogram(depth: 20)
-                    .foregroundColor(Color("PColor"))
+                    .fill(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Color("PC5"), Color("PC10")]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing))
                     .edgesIgnoringSafeArea(.top)
                 Text("Jesteśmy organizacją, która wspiera lokalne, zrównoważone rolnictwo i małych lokalnych wytwórców. Ważne są dla nas kwestie społeczne, ekologiczne i kulturowe.Prezentujemy różnorodne  wyroby lokalne i ciekawe połączenia smaków, odkrywamy i chronimy niepowtarzalny klimat i tożsamość miejsca. Działamy bez wsparcia żadnych środków, projektów i urzędów.").font(.system(size: 22, weight: .medium, design: .rounded)).foregroundColor(.white).padding(.horizontal, 15.0).padding(.vertical, 32)
                     .edgesIgnoringSafeArea(.top)
